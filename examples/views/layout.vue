@@ -1,26 +1,4 @@
-## layout-ry
-
-### 开发
-```bash
-# insatall
-npm install layout-ry
-
-# 在程序入口添加（main.js）
-import LayoutRy from 'layout-ry'
-import 'layout-ry/lib/layout-ry.css'
-Vue.use(LayoutRy)
-```
-
-### 属性
-avatar 头像
-isCollapse 菜单是否折叠
-routes 菜单数据
-
-### 方法
-logout 退出登录逻辑
-
-### 示例
-```
+<!--  -->
 <template>
   <LayoutRy :routes="routes" :isCollapse.sync="isCollapse" :avatar="avatar" @logout="logout" />
 </template>
@@ -31,18 +9,20 @@ export default {
   components: {},
   data () {
     return {
-      avatar:"https://tse1-mm.cn.bing.net/th/id/OIP.oeLZkSlaFXXi4uM2UsbMowAAAA?pid=Api&rs=1",
+      avatar: "https://tse1-mm.cn.bing.net/th/id/OIP.oeLZkSlaFXXi4uM2UsbMowAAAA?pid=Api&rs=1",
       isCollapse: false,
       routes: [
         {
           path: '/index',
+          name: '首页',
           meta: {
-            icon: 'el-icon-location',
-            title: "test",
+            icon: 'el-icon-s-home',
+            title: "首页",
           }
         },
         {
           path: '/test',
+          name:'测试',
           meta: {
             icon: 'el-icon-edit',
             title: "测试",
@@ -50,14 +30,14 @@ export default {
           children: [
             {
               path: 'one',
-              name: 'one',
+              name: '菜单1',
               meta: {
                 title: "菜单1",
               }
             },
             {
               path: 'two',
-              one: 'two',
+              name: '菜单2',
               meta: {
                 title: "菜单2",
               }
@@ -69,13 +49,10 @@ export default {
     };
   },
   methods: {
-    logout(){
-      console.log('退出登录')
+    logout () {
+      // 退出登录的逻辑
+      console.log('退出登录123')
     }
   }
 }
 </script>
-```
-
-## git地址
-https://github.com/MuZiy/layout-ry
