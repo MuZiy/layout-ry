@@ -2,6 +2,7 @@
 <template>
 <div class=''>
   <h1>首页</h1>
+  <svg-icon icon-class="peoples" />
 </div>
 </template>
 

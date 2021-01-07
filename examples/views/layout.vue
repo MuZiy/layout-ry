@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-  <LayoutRy :routes="routes" :isCollapse.sync="isCollapse" :avatar="avatar" @logout="logout" />
+  <LayoutRy :routes="routes" :isCollapse.sync="isCollapse" :avatar="avatar" @logout="logout" >
+    <p slot="tagsView">tagsView</p>
+  </LayoutRy>
 </template>
 
 <script>
@@ -16,7 +18,7 @@ export default {
           path: '/index',
           name: '首页',
           meta: {
-            icon: 'el-icon-s-home',
+            icon: 'dashboard',
             title: "首页",
           }
         },
@@ -24,7 +26,7 @@ export default {
           path: '/test',
           name:'测试',
           meta: {
-            icon: 'el-icon-edit',
+            icon: 'education',
             title: "测试",
           },
           children: [

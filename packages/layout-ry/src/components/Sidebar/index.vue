@@ -77,11 +77,14 @@ export default {
     margin: 0;
     padding-left: 0;
     text-align: left;
+    .svg-icon {
+      margin-right: 16px;
+    }
     a {
       display: inline-block;
       width: 100%;
       overflow: hidden;
-      text-decoration: none!important;
+      text-decoration: none !important;
     }
     .el-menu-item,
     .el-submenu__title {
